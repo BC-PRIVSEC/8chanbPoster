@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?scenebuilder-background-color 0x66edffff?>
+
+<AnchorPane fx:id="proxy" disable="false" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" pickOnBounds="false" prefHeight="236.0" prefWidth="710.0" visible="true" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ProxyController">
+  <children>
+    <Pane layoutX="2.0" layoutY="2.0" prefHeight="23.0" prefWidth="598.0">
+      <children>
+        <Label layoutX="293.0" layoutY="3.0" prefHeight="15.0" prefWidth="113.0" text="Captcha Challenge" />
+        <MenuBar layoutX="0.0" layoutY="-1.0">
+          <menus>
+            <Menu mnemonicParsing="false" text="File">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#exit" text="Close" />
+              </items>
+            </Menu>
+          </menus>
+        </MenuBar>
+      </children>
+    </Pane>
+    <Pane layoutX="0.0" layoutY="25.0" prefHeight="193.0" prefWidth="702.0">
+      <children>
+        <Label layoutX="14.0" layoutY="6.0" text="Proxy: " />
+            <ImageView fx:id="iv_challenge" fitHeight="150.0" fitWidth="382.0" layoutX="69.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="19.0" layoutY="94.0" prefHeight="17.0" prefWidth="50.0" text="Captcha" />
+            <Button fx:id="send_challenge" layoutX="628.0" layoutY="99.0" mnemonicParsing="false" onAction="#challengeMe" text="Validate" />
+            <TextField fx:id="challenge" layoutX="466.0" layoutY="99.0" />
+            <Label layoutX="466.0" layoutY="139.0" prefHeight="17.0" prefWidth="59.0" text="Response:" />
+            <Label fx:id="lbl_response" layoutX="540.0" layoutY="139.0" prefHeight="17.0" prefWidth="149.0" />
+            <Label fx:id="lbl_proxy" layoutX="55.0" layoutY="6.0" prefHeight="17.0" prefWidth="191.0" />
+      </children>
+    </Pane>
+  </children>
+</AnchorPane>
