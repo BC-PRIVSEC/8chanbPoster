@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?scenebuilder-background-color 0x66edffff?>
+
+<AnchorPane disable="false" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" pickOnBounds="false" prefHeight="640.0" prefWidth="710.0" visible="true" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ImageController">
+  <children>
+      <ImageView fx:id="imageView" fitHeight="594.0" fitWidth="600.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" />
+      <Pane fx:id="bot" layoutX="14.0" layoutY="590.0" prefHeight="35.0" prefWidth="683.0">
+         <children>
+            <Button fx:id="btn_close" layoutX="319.0" layoutY="5.0" mnemonicParsing="false" onAction="#exit" text="Close" />
+         </children>
+      </Pane>
+  </children>
+</AnchorPane>
