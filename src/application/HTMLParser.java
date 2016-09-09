@@ -31,6 +31,8 @@ public class HTMLParser {
 				}
 				ret = ret + " <b>" + p.getName() + "</b>" +  p.getEmail() + " ";
 				ret = ret + "<img src=\"" + p.getFlag() + "\"/> ";
+				if (!p.getFilename().equals("")) {
+				ret = ret + " (" + p.getFilename() + ") ";}
 				ret = ret + "<i>" + p.getDate() + "</i> ";
 				if (p.getRepliedBy() != null) {
 					String cc = "";
@@ -40,7 +42,14 @@ public class HTMLParser {
 					ret = ret + cc;
 				}
 				ret = ret + "<br></p><p><table><tr><td>";
-				if (p.getImage().equals("No file!")) {ret = ret + "</td><td>";} else {if (p.getActual().contains("gif")){ret = ret + "<a><img class=\"image\" border=\"0\" width=\"200px\"  alt=\"" + p.getActual() + "\" src=\"" + p.getActual() + "\"></img></a></td><td>";} else {ret = ret + "<a><img class=\"image\" border=\"0\" alt=\"" + p.getActual() + "\" src=\"" + p.getImage() + "\"></img></a></td><td>";}}
+				if (p.getImage().equals("No file!")) {ret = ret + "</td><td>";} 
+				else 
+				{
+					if (p.getActual().contains("gif"))
+					{ret = ret + "<a><img class=\"image\" border=\"0\" width=\"200px\"  alt=\"" + p.getActual() + "\" src=\"" + p.getActual() + "\"></img></a></td><td>";} 
+					else {ret = ret + "<a><img class=\"image\" border=\"0\" alt=\"" + p.getActual() + "\" src=\"" + p.getImage() + "\"></img></a></td><td>";
+					}
+					}
 				ret = ret + "<br>" + p.getHTMLBody();
 				ret = ret + "</td></tr></table></p><br><hr />";
 			}

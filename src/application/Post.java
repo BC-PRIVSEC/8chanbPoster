@@ -13,15 +13,17 @@ public class Post {
 	private ReplyList repliedby;
 	private ReplyList repliedTo;
 	private String subject;
+	private String filename;
 
 
-	public Post (String subject, String name, String body,String email_in, String ID, String date, String image, ReplyList replyList,String sflag,String actualImage, boolean flag)  {
+	public Post (String subject, String name, String body,String email_in, String ID, String date, String image, String filename, ReplyList replyList,String sflag,String actualImage, boolean flag)  {
 		this.body = body;
 		this.setSubject(subject);
 		this.poster = name;
 		this.ID = Integer.parseInt(ID);
 		this.image = image;
 		this.date = date;
+		this.setFilename(filename);
 		this.email = email_in;
 		this.setMarkedForDeletion(flag);
 		if (!email.equals("")) {
@@ -117,5 +119,13 @@ public class Post {
 
 	public String toString() {
 		return "Post ID: " + ID + "\nPoster: " + poster + "\nEmail:" + email +  "\nDate: " + date + "\nRepliedTo:" + repliedTo.toString() + "\nBody:" + body + "\n##########################\n";
+	}
+
+	public String getFilename() {
+		return filename;
+	}
+
+	public void setFilename(String filename) {
+		this.filename = filename;
 	}
 }

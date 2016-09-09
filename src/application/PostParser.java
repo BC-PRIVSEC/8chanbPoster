@@ -204,7 +204,10 @@ public class PostParser {
 					if (!img.first().attr("src").equals("")) {
 						flag = "http://8ch.net" + img.first().attr("src");}
 				}
-				Post post_file = new Post("",name,body,email,id,date,file,repliedTo,flag,actual,false);
+				String filename ="";
+				Elements imgnames = post.getElementsByClass("postfilename");
+				filename = imgnames.html();
+				Post post_file = new Post("",name,body,email,id,date,file,filename,repliedTo,flag,actual,false);
 				myPosts.add(post_file);
 				post_file = null;
 			}

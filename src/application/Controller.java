@@ -341,7 +341,7 @@ public class Controller {
 	@FXML
 	private void tryToPost() throws IOException {
 		//Save the post! Maybe It fails!
-		myPost = new Post(txt_subject.getText(),txt_name.getText(), txt_comment.getText(), txt_email.getText(), "0000000", Long.toString(System.currentTimeMillis()), imagePath.getText(), null,"", "", false);
+		myPost = new Post(txt_subject.getText(),txt_name.getText(), txt_comment.getText(), txt_email.getText(), "0000000", Long.toString(System.currentTimeMillis()), imagePath.getText(),"null", null,"", "", false);
 		LinkedHashMap<Object, Object> params = new LinkedHashMap<Object, Object>();
 		params.put("thread", threadID.getText());
 		params.put("firstname", "");
